@@ -5,12 +5,24 @@
 	margin: auto;
   	width: 50%;
 }
+img{
+	width:200px;
+}
+.driehoekFooter {
+	border-bottom: 50px solid;
+	border-left: 1250px solid transparent;
+	border-right: 0px solid transparent;
+	height: 0;
+	width: 100%;
+	background-color:#003581;
+}
 .driehoek {
-	border-bottom: 50px solid #de0000;
+	border-bottom: 50px solid;
 	border-left: 0px solid transparent;
 	border-right: 1250px solid transparent;
 	height: 0;
-	width: 100%;
+	width: 50%;
+	background-color: #de0000;
 }
 .vierkant {
 	width: 100%;
@@ -19,5 +31,5 @@
 }
 body{
 	margin: 0;
+	background-color: #de0000;
 }
-

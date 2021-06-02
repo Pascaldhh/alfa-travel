@@ -13,5 +13,8 @@
 		</div>
 		<div class="vierkant">
 		</div>
+		<img src="images/logo.jpg">
+
+		<p>geen idee man, geen enkele css verandering die ik maakte deed het.. voelt alsof de css file die gebruikt word ergens verstopt is ofzo,. k kijk vrijdag ochtend verder, iig uren verspilt en ik ben boos</p>
 	</div>
 	
