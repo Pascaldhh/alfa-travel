@@ -6,6 +6,5 @@ if (isset($_GET['page']) && !empty($_GET['page'])) {
     $page = $_GET['page'];
 }
 include_once(sprintf('pages%s%s.php', DS, $page));
-include_once('homepage.php');
 include_once('footer.php');
 ?>
