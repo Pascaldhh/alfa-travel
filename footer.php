@@ -1,9 +1,10 @@
-	<div class="vierkant" style="background-color:#003581; height: 180px;">
-		<div class="center">
-			<p>Pagina 1 | Pagina 2 | Pagina 3</p>
+	<footer>
+		<div class="footer__vierkant" style="">
+			<div class="center">
+				
+			</div>
 		</div>
-	</div>
-	<div class="driehoekFooter">
-	</div>   
+		<div class="footer__driehoek"></div> 
+	</footer>  
 </body>
 </html>

@@ -17,9 +17,20 @@
 </head>
 <body>	
 	<header>
-		<div class="driehoek">
+		<div class="head__driehoek"></div>
+		<div class="head__vierkant"></div>
+		<div class="container">
+			<div class="navbalk">
+			<img class="logo" src="images/logo.jpg">
+				<ul>
+					<li><a href="wereldKaart.html">wereld kaart</a></li>
+					<li><a href="vakanties.html">vakanties</a></li>
+					<li><a href="informatieOverLanden.html">informatie over landen</a></li>
+					<li><a href="contact">contact</a></li>
+					<div class="search">
+						<input type="text" placeholder="Zoeken">
+					</div>
+				</ul>
+			</div>
 		</div>
-		<div class="vierkant">
-		</div>
-		<img src="images/logo.jpg">
 	</header>
