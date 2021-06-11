@@ -1,3 +1,4 @@
+	</div>
 	<footer>
 		<div class="footer__vierkant" style="">
 			<div class="center">
