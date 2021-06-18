@@ -1,11 +1,7 @@
 	</div>
 	<footer>
-		<div class="footer__vierkant" style="">
-			<div class="center">
-				
-			</div>
-		</div>
-		<div class="footer__driehoek"></div> 
+		<div class="normal-foot"></div>
+		<div class="rotate-foot"></div>
 	</footer>  
 </body>
 </html>

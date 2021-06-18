@@ -17,12 +17,12 @@
 </head>
 <body>	
 	<header>
-		<div class="head__driehoek"></div>
-		<div class="head__vierkant"></div>
+		<div class="rotate-head"></div>
+		<div class="normal-head"></div>
 		<div class="container">
 			<div class="navbalk">
-			<img class="logo" src="images/logo.jpg">
-				<ul>
+			<a href="?"><img class="logo" src="images/logo.jpg"></a>
+				<ul class="main-menu">
 					<li><a href="wereldKaart.html">wereld kaart</a></li>
 					<li><a href="vakanties.html">vakanties</a></li>
 					<li><a href="informatieOverLanden.html">informatie over landen</a></li>
