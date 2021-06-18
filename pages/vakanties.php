@@ -20,9 +20,7 @@
         <br>
         <h2>Voorbeeld vakanties</h2>
         <?php
-            for ($j=0; $j < 4; $j++) {
-                echo "<div class='row'>";
-                for ($i=0; $i < 3; $i++) { 
+            for ($j=0; $j < 16; $j++) {
                     echo "<div class='vakantie'>
                     <img src='images/testafbeelding.jpg' style='width: 100%;'></img>
                     <h2>vakantie bestemming</h2>
@@ -30,8 +28,6 @@
                     tempor incididunt ut labore et dolore magna aliqua  <b>. . .</b></p>
                     <a href=''><img src='images/driehoek.png' style='margin-right:10px;' width='10px' class='driehoekje'><u><i>Lees meer</i></u></a>
                     </div>";
-                }
-                echo "</div>";
             }  
         ?>
         <div class="right-half">
