@@ -1,0 +1,35 @@
+/*css voor de contact Pagina*/
+
+.contact {
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.contact p	{
+	font-style: normal;
+}
+
+.map iframe {
+	width: 40%;
+	height: 40%;
+}
+
+.map {
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+}
+
+.text {
+	display: flex;
+	flex-direction: row;
+	flex-grow: 3;
+	font-size: 25px;
+}
+
+.text p {
+	margin: 5%
+}
