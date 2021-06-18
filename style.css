@@ -17,14 +17,14 @@ body{
 .rotate-head {
 	content:'';
 	transform: skew(0deg, 2deg);
-	background:red;
+	background:rgb(222,0,0);
 	display:block;
 	height: 67px;
 	transform-origin:left;
 }
 .normal-head {
 	height: 30px;
-	background:red;
+	background:rgb(222,0,0);
 	display:block;
 }
 .mobile-menu {
