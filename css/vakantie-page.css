@@ -37,6 +37,16 @@ p{
 	background-color: rgba(208,228,229, 0.5);
 	color: black;
 }
+@media only screen and (max-width: 1000px) {
+  .row{
+	display: flex;
+	width: 100%;	
+    flex-wrap: wrap; 
+    flex-direction: row;
+  }
+  .vakantie{
+	width: 40%;
+}
 @media only screen and (max-width: 800px) {
   .row{
 	display: flex;
