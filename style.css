@@ -23,22 +23,55 @@ body{
 	transform-origin:left;
 }
 .normal-head {
-	height:100px;
+	height: 30px;
 	background:red;
 	display:block;
 }
+.mobile-menu {
+	display: flex;
+	height: 25px;
+	width: 35px;
+	align-items: center;
+	position: relative;
+}
+.hamburger-btn {
+	width: 100%;
+	height: 4px;
+	background-color: #003581;
+	border-radius: 5px;
+}
+.hamburger-btn::before, .hamburger-btn::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 4px;
+	border-radius: 3px;
+	background-color: #003581;
+}
+.hamburger-btn::before {
+	top: 0;
+}
+.hamburger-btn::after {
+	bottom:0;
+}
 .navbalk {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
+	align-items: center;
 	padding: 10px 0;
 }
-.navbalk ul {
-	text-decoration: none;
+.navbalk nav {
 	display: none;
-	gap: 15px;
-	align-items: center;
+	position: absolute;
+}
+.navbalk .main-menu {
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
 	flex-wrap: nowrap;
 }
+
 .navbalk li {
 	list-style: none;
 }
@@ -48,6 +81,19 @@ body{
 	position: relative;
 	padding: 7px 15px;
 	border-radius: 3px;
+}
+.navbalk.open nav{
+	z-index: 1;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: red;
 }
 
 .navbalk a:hover {
@@ -68,22 +114,21 @@ body{
 }
 /* Footer */
 .normal-foot {
-	height:100px;
+	height: 30px;
 	background:#003581;
 	display:block;
 }
 .rotate-foot {
 	content:'';
-	transform: skew(0deg, -2.5deg);
+	transform: skew(0deg, -2deg);
 	background:#003581;
 	display:block;
 	height: 67px;
-	transform-origin:right;
+	transform-origin:left;
 }
 
 /*link with */
 a:hover{
-  color: #de0000;
   text-decoration: none;
 }
 
@@ -92,12 +137,36 @@ a:hover img{
   transition: all 300ms ease;
 }
 
-
+@media(min-width:680px) {
+	.normal-head {
+		height: 50px;
+	}
+	.normal-foot {
+		height: 50px;
+	}
+}
 @media(min-width:1280px) {
+	.normal-head {
+		height: 100px;
+	}
 	.navbalk {
 		justify-content: space-between;
 	}
-	.navbalk ul {
+	.navbalk nav{
 		display: flex;
+		position: static;
+	}
+	.navbalk .main-menu {
+		flex-direction: row;
+		gap: 15px;
+	}
+	.navbalk.open nav {
+		all: unset;
+	}
+	.normal-head {
+		height: 100px;
+	}
+	.mobile-menu {
+		display: none;
 	}
 }

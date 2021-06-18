@@ -21,16 +21,21 @@
 		<div class="normal-head"></div>
 		<div class="container">
 			<div class="navbalk">
-			<a href="?"><img class="logo" src="images/logo.jpg"></a>
-				<ul class="main-menu">
-					<li><a href="wereldKaart.html">wereld kaart</a></li>
-					<li><a href="vakanties.html">vakanties</a></li>
-					<li><a href="informatieOverLanden.html">informatie over landen</a></li>
-					<li><a href="contact">contact</a></li>
-					<div class="search">
-						<input type="text" placeholder="Zoeken">
-					</div>
-				</ul>
+				<a href="?"><img class="logo" src="images/logo.jpg"></a>
+				<div class="mobile-menu">
+					<div class="hamburger-btn"></div>
+				</div>
+				<nav>
+					<ul class="main-menu">
+						<li><a href="wereldKaart.html">wereld kaart</a></li>
+						<li><a href="vakanties.html">vakanties</a></li>
+						<li><a href="informatieOverLanden.html">informatie over landen</a></li>
+						<li><a href="contact">contact</a></li>
+						<div class="search">
+							<input type="text" placeholder="Zoeken">
+						</div>
+					</ul>
+				</nav>
 			</div>
 		</div>
 	</header>
