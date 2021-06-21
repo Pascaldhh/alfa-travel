@@ -30,7 +30,7 @@
 						<li><a href="wereldKaart.html">wereld kaart</a></li>
 						<li><a href="?page=vakanties">vakanties</a></li>
 						<li><a href="informatieOverLanden.html">informatie over landen</a></li>
-						<li><a href="contact">contact</a></li>
+						<li><a href="?page=contact">contact</a></li>
 						<div class="search">
 							<input type="text" placeholder="Zoeken">
 						</div>

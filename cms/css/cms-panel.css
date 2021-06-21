@@ -1,0 +1,118 @@
+body {
+    background-color: rgb(233, 255, 244);
+    height: 100vh;
+}
+.container {
+    padding: 0 20px;
+    width: 100%;
+}
+header {
+    background-color: rgb(60, 66, 66);
+    padding: 8px 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.h-container {
+    display: flex;
+    margin: 0 0 0 auto;
+    max-width: calc(100% - 250px);
+}
+.cms-logo {
+    margin-left: 40px;
+    border-radius: 7px;
+    font-size: 20px;
+    color: white;
+    user-select: none;
+    cursor: pointer;
+}
+.logout-btn {
+    background-color: royalblue;
+    color: white;
+    padding: 7px 15px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 3px;
+}
+.header__right {
+    margin-left: auto;
+}
+.header__left {
+    display: flex;
+    align-items: center;
+}
+.view-homebtn {
+    color: white;
+    font-weight: bold;
+}
+.body-content {
+    display: flex;
+    height: calc(100% - 60px);
+}
+.body-content .sidepanel {
+    background-color: rgb(60, 66, 66);
+    max-width: 250px;
+    color:white;
+    width: 100%;
+}
+.sidepanel .user-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 12px;
+    padding:0 10px;
+}
+.sidepanel .user-menu a {
+    color: unset;
+    text-decoration: none;
+}
+.user-menu li {
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+}
+.body-content .content {
+    width: 100%;
+    margin: 0 15px;
+}
+.page-title {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.users-panel {
+    padding: 20px;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 1px 1px 3px 1px black;
+}
+.users-panel .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.users-panel .btn {
+    color: unset;
+    text-decoration: none;
+    padding: 7px 15px;
+    border-radius: 5px;
+    color:white;
+}
+.users-panel .btn:nth-child(1) {
+    background-color: red;
+}
+.users-panel .btn:nth-child(2) {
+    background-color: rgb(12, 219, 12);
+}
+.users-panel .user {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
