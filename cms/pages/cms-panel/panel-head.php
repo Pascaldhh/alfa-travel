@@ -1,6 +1,6 @@
 <?php if(!$_SESSION['user']) { header('Location: ?'); }?>
 <header>
-    <a href="?pages=cms&page=home"><p class="cms-logo">CMS</p></a>
+    <a href="?pages=cms&page=home" class="cms-logo">CMS</p></a>
     <div class="container h-container">
         <div class="header__left">
             <a class="view-homebtn" href="?" target="_blank">Bekijk website</a>

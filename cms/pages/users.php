@@ -4,10 +4,11 @@
     <h2 class="page-title">Users</h2>
     <div class="users-panel">
         <div class="row">
-            <a href="" class="btn">Delete User</a>
-            <a href="" class="btn">Create User</a>
+            <a href="?pages=cms&page=users&page2=del" class="btn">Delete User</a>
+            <a href="?pages=cms&page=users&page2=add" class="btn">Create User</a>
         </div>
         <?php 
+        $db = new DB();
         $users = $db->Read('users', 'username, role');
         foreach($users as $user) 
         {
