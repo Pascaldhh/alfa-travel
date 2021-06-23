@@ -3,7 +3,7 @@
         <block>
         <div class="left-half">
             <div class="vierkantAchterText">
-                <img src="pages/worldmap.svg" class="wereldmap">
+                <?php include_once('worldmap.html'); ?>
             </div>
         </div>
         <div class="vierkantAchterText">

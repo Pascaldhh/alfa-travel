@@ -7,6 +7,7 @@
                     <div>
                         <h1>Bedankt!</h1><br>
                         <h2>De mail is verstuurd met uw informatie.</h2>
+                        <h2>Je krijgt spoedig een bevestigingsmail!</h2>
                         <img src="images/bedankster.gif" style=" width: 60%;">
                         <h2>U wordt doorverwezen naar de home-pagina.</h2>
                         <div id="progressBar">

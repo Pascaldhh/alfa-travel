@@ -11,10 +11,13 @@ p{
 	background-color: rgba(208,228,229, 0.5);
 	color: black;
 }
-.wereldmap{
+svg{
 	width: 100%;
 	background-color:  #003581;
 	padding: 20px;
+}
+path:hover{
+  fill: #de0000;
 }
 .box{
 	display: flex;
