@@ -25,14 +25,15 @@
 .vierkantAchterText{
 	line-height: 1.3;
 	padding: 5%;
+	width: 60%;
 	background-color: rgba(208,228,229, 0.5);
 	color: black;
 }
 #boxje{
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	width: 100%;
-	padding: 5%;
+	margin: 5% 0 5% 0;
 }
 #wolkenfoto{
 	width: 100%;
@@ -50,7 +51,6 @@ li{
 	width: 100%;
 	flex-direction: column;
 	align-items:center;
-	padding: 5%;
   }
   .map iframe {
 	width: 100%;
@@ -61,4 +61,7 @@ li{
 		width: 100%;
 		height: 300px;
 	}
+}
+.vierkantAchterText{
+	width: 100%;
 }
