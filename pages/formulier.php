@@ -72,7 +72,7 @@ class MH
                         <br><br>
                         <textarea name="message" rows="4" cols="50" placeholder="Vul hier een korte beschrijving in"></textarea>
                         <br>
-                        <input type="submit" value="Verzenden" required>
+                        <input type="submit" value="Verzenden" action="http://localhost/alfaTravel/alfa-travel/?page=formulier-bedank-pagina" required>
                     </form>
                 </div>
             </div>
