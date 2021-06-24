@@ -13,12 +13,13 @@ p{
 }
 svg{
 	width: 100%;
-	background-color:  #003581;
-	padding: 20px;
+	background-color: lightgrey;
+	padding: 20px 50px 20px 20px;
 }
 path:hover{
-  fill: #de0000;
+  fill: #003581;
 }
+
 .box{
 	display: flex;
 	justify-content: space-around;

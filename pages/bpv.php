@@ -1,9 +1,37 @@
 <link rel="stylesheet" type="text/css" href="css/bpv.css">
+<?php
+
+
+try {
+  $db_alfatravel = new PDO('mysql:host=localhost;dbname=alfatravel' , 'root', '');
+  $db_alfatravel->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOExeption $e) {
+  echo $e->getMessage();
+}
+
+
+?>
     <div class="container">
         <block>
         <div class="left-half">
             <div class="vierkantAchterText">
-                <?php include_once('worldmap.html'); ?>
+                <?php include_once('worldmap.html');
+                $query = 'SELECT `Land_ID`, `land` FROM `bpv`';
+                          $sth_bpv = $db_alfatravel->prepare($query);
+                          $sth_bpv->execute();
+
+                          while ($bpvID1 = $sth_bpv->fetch(PDO::FETCH_ASSOC)){
+                            $bpvID[] = $bpvID1['Land_ID'];
+                          }
+                          echo '<style type="text/css">';
+                            foreach ($bpvID as $key => $item) {
+                              echo "#" . $item . "{ fill: #ce0000;} ";
+                            }
+                          echo "</style>";
+                  $sth_bpv = $db_alfatravel->prepare($query);
+                  $sth_bpv->execute();
+                ?>
+
             </div>
         </div>
         <div class="vierkantAchterText">
@@ -16,9 +44,12 @@
                     <h2>Lijst met landen</h2>
                     <select name="cars" id="cars">
                       <?php
-                          for ($i=1; $i < 90; $i++) { 
-                            echo "<option value=" . "stage" . strval($i) . ">stage " . strval($i) . "</option>";
+                          while ($bpv1 = $sth_bpv->fetch(PDO::FETCH_ASSOC)){
+                            $bpv[] = $bpv1['land'];
                           }
+                            foreach ($bpv as $key => $item) {
+                              echo "<option value=" . $item . ">" . $item . "</option>";;
+                            }
                       ?>
                         
                     </select>
