@@ -12,12 +12,10 @@ try {
 
 ?>
 <script>
-function myFunction() {
-  // $name = document.getElementById($post).name();
-  // $_POST['taskOption'] = $name;
-  // console.log($name);
-  // console.log($_POST['taskOption']);
-  alert("dkoks");
+function myFunction(item) {
+  document.getElementById('optie').value = item;
+  alert(item);
+  document.forms["taskOption"].submit();
 }
 </script>
     <div class="container">
@@ -50,9 +48,11 @@ function myFunction() {
 <!--<div class="search"><h2>Landen zoeken</h2><input type="text" placeholder="Zoeken"></div> -->
                   <div>
                     <h2>Lijst met landen</h2>
-                      <form method="post" action="">
-                      <select name="taskOption">
+                      <form method="post" action="" id="taskOption">
+                      <select name="taskOption" id="optie" >
+                      <option value="Geen">Geen</option>
                       <?php
+
                         while ($bpv1 = $sth_bpv->fetch(PDO::FETCH_ASSOC)){
                           $bpv[] = $bpv1['land'];
                         }
@@ -60,6 +60,7 @@ function myFunction() {
                           echo "<option value=" . $item . ">" . $item . "</option>";
                         }
                       ?>
+                      <option value="ES"></option>
                       </select>
                       <input type="submit" value="Bekijken"/>
                     </form>
@@ -73,13 +74,13 @@ function myFunction() {
               <div class="vierkantAchterText">
                 <div id="info">
                   <?php
-                    if(!isset($_POST['taskOption'])){
+                    if(!isset($_POST['taskOption']) || $_POST['taskOption'] == "Geen"){
                       echo "<h2>Kies een land waar je meer informatie over zou willen</h2>
                       <p>Je kunt een land kiesen door er 1 aan te klikken op de wereldkaart, of door gebruik te maken van de zoekbalk/dropdown-menu hierboven.</p>";
                     }
                     else{
-                      $land = $_POST['taskOption'];
-                      $query = 'SELECT `tekst` FROM `bpv` WHERE `land` = "'. $land . '"';
+                        $land = $_POST['taskOption'];
+                      $query = 'SELECT `tekst` FROM `bpv` WHERE `Land_ID` = "'. $land .'" OR `land` = "'. $land . '"';
                       $sth_bpv = $db_alfatravel->prepare($query);
                       $sth_bpv->execute();
                     while ($landTekst1 = $sth_bpv->fetch(PDO::FETCH_ASSOC)){
@@ -88,6 +89,7 @@ function myFunction() {
                     foreach ($landTekst as $key => $item){
                       echo $item;
                     }
+                     
                   ?>
                   <div class="slideshow-container">
                     <?php
