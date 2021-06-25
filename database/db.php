@@ -6,7 +6,7 @@ class DB
     private $host = 'localhost';
     private $user = 'root';
     private $pass = '';
-    private $name = 'alfa-travel';
+    private $name = 'alfatravel';
     
     public function __construct()
     {

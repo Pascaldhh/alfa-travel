@@ -2,7 +2,7 @@
 <?php
 $id = 1;
 include 'db.php';
-$db = new db();
+$db = new db2();
 //$titel = $db->Read('vakanties','titel','id =' . $id);
 //echo $titel[0]["titel"];
 

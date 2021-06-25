@@ -17,8 +17,8 @@
                         <script>
                             var progress = 1;
                                 setInterval(function timer() {
-                                    if (progress > 97) {
-                                        window.location.href = "http://localhost/alfaTravel/alfa-travel/?";
+                                    if (progress > 5) {
+                                        window.location.href = "?";
                                     }
                                         if (progress < 100) {
                                             document.getElementById("bar").style.width = String(progress) + "%";

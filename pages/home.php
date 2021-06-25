@@ -21,7 +21,7 @@
                 </p>
                 </div>
                 <div class="vierkantAchterText">
-                    <a href=""><img src="images/driehoek.png" style="margin-right:10px;" width="10" class="driehoekje"><u><i>
+                    <a href="?page=formulier"><img src="images/driehoek.png" style="margin-right:10px;" width="10" class="driehoekje"><u><i>
                         <?php echo $db->Read('website_content', 'content3', 'page_id = "1"')[0]['content3']; ?>
                     </i></u></a>
                 </div>
@@ -38,7 +38,7 @@
                     </p>
                 </div>
                 <div class="vierkantAchterText">
-                    <a href=""><img src="images/driehoek.png" style="margin-right:10px;" width="10" class="driehoekje"><u><i>
+                    <a href="?page=formulier"><img src="images/driehoek.png" style="margin-right:10px;" width="10" class="driehoekje"><u><i>
                     <?php echo $db->Read('website_content', 'content3', 'page_id = "1"')[1]['content3']; ?>
                     </i></u></a>
                 </div>

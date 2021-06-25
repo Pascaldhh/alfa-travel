@@ -2,7 +2,7 @@
 /**
  * here ara all the database functions
  */
-class db
+class db2
 {
 
   /**

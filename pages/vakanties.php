@@ -14,7 +14,7 @@
                 <br><br>
             <h2>Vakantie aanvragen</h2>
                 <p>Vul hier gemakkelijk en snel een aanvraagformulier in en wij helpen jou met het uitwerken van je ultieme reis!</p>
-                <a href=""><img src="images/driehoek.png" style="margin-right:10px;" width="10" class="driehoekje"><u><i>Klik hier voor het aanvraagformulier</i></u></a>
+                <a href="?page=formulier"><img src="images/driehoek.png" style="margin-right:10px;" width="10" class="driehoekje"><u><i>Klik hier voor het aanvraagformulier</i></u></a>
             </div>
         </div>
         <br>
