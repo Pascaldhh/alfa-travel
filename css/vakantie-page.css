@@ -40,8 +40,8 @@ p{
 @media only screen and (max-width: 1000px) {
   .row{
 	display: flex;
-	width: 100%;	
-    flex-wrap: wrap; 
+	width: 100%;
+    flex-wrap: wrap;
     flex-direction: row;
   }
   .vakantie{
