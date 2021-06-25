@@ -1,3 +1,4 @@
+<?php $db = new DB(); ?>
 <link rel="stylesheet" type="text/css" href="css/home-page.css">
 <div class="container">
     <div class="header-container">
@@ -8,12 +9,15 @@
             <img class="block__img" src="images/loc-gebouw-map.jpg">
             <div class="text-home">
                 <div class="vierkantAchterText">
-                    <h2><b>Contact met het reisbureau</b></h2>
-                    <p class="text-home-1" style="padding-top:20px; margin: 10px;">Heb je een vraag? Onze medewerkers helpen je graag verder!
-                    Op di, wo en vrij beantwoorden wij je vragen van 9:00 tot 15:00</p>
+                    <h2><b><?php echo $db->Read('website_content', 'content1', 'page_id = "1"')[0]['content1']; ?></b></h2>
+                    <p class="text-home-1" style="padding-top:20px; margin: 10px;">
+                    <?php echo $db->Read('website_content', 'content2', 'page_id = "1"')[0]['content2']; ?>
+                </p>
                 </div>
                 <div class="vierkantAchterText">
-                    <a href=""><img src="images/driehoek.png" style="margin-right:10px;" width="10" class="driehoekje"><u><i>Klik hier voor het contactformulier</i></u></a>
+                    <a href=""><img src="images/driehoek.png" style="margin-right:10px;" width="10" class="driehoekje"><u><i>
+                        <?php echo $db->Read('website_content', 'content3', 'page_id = "1"')[0]['content3']; ?>
+                    </i></u></a>
                 </div>
             </div>
         </div>
@@ -22,13 +26,15 @@
         <div class="blocks">
             <div class="text-home">
                 <div class="vierkantAchterText">
-                    <h2><b>Aanvraag</b></h2>
-                    <p class="text-home-1" style="padding-top:20px; margin:10px;">Vul hier gemakkelijk en snel een aanvraagformulier in en wij
-                        helpen jou met het uitwerken van je ultieme reis!
+                    <h2><b><?php echo $db->Read('website_content', 'content1', 'page_id = "1"')[1]['content1']; ?></b></h2>
+                    <p class="text-home-1" style="padding-top:20px; margin:10px;">
+                    <?php echo $db->Read('website_content', 'content2', 'page_id = "1"')[1]['content2']; ?>
                     </p>
                 </div>
                 <div class="vierkantAchterText">
-                    <a href=""><img src="images/driehoek.png" style="margin-right:10px;" width="10" class="driehoekje"><u><i>Klik hier voor het aanvraagformulier</i></u></a>
+                    <a href=""><img src="images/driehoek.png" style="margin-right:10px;" width="10" class="driehoekje"><u><i>
+                    <?php echo $db->Read('website_content', 'content3', 'page_id = "1"')[1]['content3']; ?>
+                    </i></u></a>
                 </div>
             </div>
             <img class="block__img" src="images/vliegtuig.jpg">

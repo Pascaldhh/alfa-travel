@@ -1,10 +1,17 @@
 <?php
+session_start();
+
+// defining things
 define('DS', DIRECTORY_SEPARATOR);
-include_once('header.php');
-$page = 'home';
-if (isset($_GET['page']) && !empty($_GET['page'])) {
-    $page = $_GET['page'];
+define('DIRR', __DIR__);
+
+// require database
+require_once(__DIR__ . DS . 'database' . DS . 'db.php');
+
+// require all functions
+foreach (glob(implode(DS, [__DIR__, 'cms', 'functions', '*.php'])) as $file) {
+    require_once($file);
 }
-include_once(sprintf('pages%s%s.php', DS, $page));
-include_once('footer.php');
-?>
+
+// Page structure
+require_once(sprintf('cms%srouting%sroute.php', DS, DS));
