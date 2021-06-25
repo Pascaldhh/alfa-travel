@@ -11,13 +11,7 @@ try {
 
 
 ?>
-<script>
-function myFunction(item) {
-  document.getElementById('optie').value = item;
-  alert(item);
-  document.forms["taskOption"].submit();
-}
-</script>
+
     <div class="container">
         <div class="left-half">
             <div class="vierkantAchterText">
@@ -30,10 +24,10 @@ function myFunction(item) {
                     }
                     foreach ($bpvID as $key => $item) {
                       echo '<style type="text/css">';
-                      echo "#" . $item . "{ fill: #ce0000;} ";
+                      echo "#" . $item . "{ fill: #ce0000; cursor: pointer;} ";
                       echo "</style>";
                       // echo "<script> document.getElementById('" . $item . "').setAttribute('method','POST'); </script> ";
-                      echo "<script> document.getElementById('" . $item . "').setAttribute('onclick','myFunction(". $item .")'); </script>";
+                      echo "<script> document.getElementById('" . $item . "').setAttribute('onclick','myFunction(\'". $item ."\')'); </script>";
                     }
                     // while ($bpv1 = $sth_bpv->fetch(PDO::FETCH_ASSOC)){
                     //       $bpv[] = $bpv1['land'];
@@ -59,8 +53,14 @@ function myFunction(item) {
                         foreach ($bpv as $key => $item){
                           echo "<option value=" . $item . ">" . $item . "</option>";
                         }
-                      ?>
-                      <option value="ES"></option>
+                        while ($bpvID1 = $sth_bpv->fetch(PDO::FETCH_ASSOC)){
+                          $bpvID[] = $bpvID1['Land_ID'];
+                        }
+                        foreach ($bpvID as $key => $item) {
+                          echo "<option style='display: none;' value=" . $item . ">" . $item . "</option>";
+                        }
+                        ?>
+<!--                       <option value="ES"></option> -->
                       </select>
                       <input type="submit" value="Bekijken"/>
                     </form>
@@ -144,3 +144,9 @@ function myFunction(item) {
             </div>
           </div>
         </div>
+        <script>
+function myFunction(item) {
+  document.getElementById('optie').value = item;
+  document.forms["taskOption"].submit();
+}
+</script>
