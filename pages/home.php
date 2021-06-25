@@ -4,6 +4,12 @@
     <div class="header-container">
         <img src="images/header-home.jpg" alt="" class="header-home">
     </div>
+        <div class="text-home" style="margin-left: 0; margin-right: 0;">
+            <div class="vierkantAchterText">
+                <h2>Over ons</h2>
+                <p>Wij van Alfa-travel zijn een groep studenten van de travel and hospitality opleiding van het Alfa-college HB. Namens onze opleiding helpen wij de studenten en medewerkers van het Alfa-college met het vinden van een vakantie of vak excursie in binnen en buitenland, of een BPV in het buitenland. Samen met jou kijken we naar de mogelijkheden en werken wij een gepast aanbod uit, gebaseerd op jouw wensen. Ons doel is om jou te helpen met jouw ultieme buitenland ervaring!</p>
+            </div>
+        </div>
     <div class="left-half ">
         <div class="blocks">
             <img class="block__img" src="images/loc-gebouw-map.jpg">
