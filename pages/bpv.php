@@ -1,97 +1,119 @@
 <link rel="stylesheet" type="text/css" href="css/bpv.css">
+<?php
+
+
+try {
+  $db_alfatravel = new PDO('mysql:host=localhost;dbname=alfatravel' , 'root', '');
+  $db_alfatravel->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOExeption $e) {
+  echo $e->getMessage();
+}
+
+
+?>
+
     <div class="container">
-        <block>
         <div class="left-half">
             <div class="vierkantAchterText">
-                <img src="pages/worldmap.svg" class="wereldmap">
-            </div>
-        </div>
-        <div class="vierkantAchterText">
-            <div class="box">   
-                <div class="search">
-                    <h2>Landen zoeken</h2>
-                    <input type="text" placeholder="Zoeken">
-                </div>
-                <div>
+                <?php include_once('worldmap.html');
+                $query = 'SELECT * FROM `bpv`';
+                  $sth_bpv = $db_alfatravel->prepare($query);
+                  $sth_bpv->execute();
+                    while ($bpvID1 = $sth_bpv->fetch(PDO::FETCH_ASSOC)){
+                      $bpvID[] = $bpvID1['Land_ID'];
+                    }
+                    foreach ($bpvID as $key => $item) {
+                      echo '<style type="text/css">';
+                      echo "#" . $item . "{ fill: #ce0000; cursor: pointer;} ";
+                      echo "</style>";
+                      // echo "<script> document.getElementById('" . $item . "').setAttribute('method','POST'); </script> ";
+                      echo "<script> document.getElementById('" . $item . "').setAttribute('onclick','myFunction(\'". $item ."\')'); </script>";
+                    }
+                    // while ($bpv1 = $sth_bpv->fetch(PDO::FETCH_ASSOC)){
+                    //       $bpv[] = $bpv1['land'];
+                    // }
+                    // foreach ($bpv as $key => $item){
+                      
+                    // }
+                  $sth_bpv = $db_alfatravel->prepare($query);
+                  $sth_bpv->execute();
+                ?>
+                <div class="box">   
+<!--<div class="search"><h2>Landen zoeken</h2><input type="text" placeholder="Zoeken"></div> -->
+                  <div>
                     <h2>Lijst met landen</h2>
-                    <select name="cars" id="cars">
+                      <form method="post" action="" id="taskOption">
+                      <select name="taskOption" id="optie" >
+                      <option value="Geen">Geen</option>
                       <?php
-                          for ($i=1; $i < 90; $i++) { 
-                            echo "<option value=" . "stage" . strval($i) . ">stage " . strval($i) . "</option>";
-                          }
-                      ?>
-                        
-                    </select>
+
+                        while ($bpv1 = $sth_bpv->fetch(PDO::FETCH_ASSOC)){
+                          $bpv[] = $bpv1['land'];
+                        }
+                        foreach ($bpv as $key => $item){
+                          echo "<option value=" . $item . ">" . $item . "</option>";
+                        }
+                        while ($bpvID1 = $sth_bpv->fetch(PDO::FETCH_ASSOC)){
+                          $bpvID[] = $bpvID1['Land_ID'];
+                        }
+                        foreach ($bpvID as $key => $item) {
+                          echo "<option style='display: none;' value=" . $item . ">" . $item . "</option>";
+                        }
+                        ?>
+<!--                       <option value="ES"></option> -->
+                      </select>
+                      <input type="submit" value="Bekijken"/>
+                    </form>
+                  </div>
                 </div>
+              </div>
             </div>
-        <br>
-        <div class="right-half">
-            <div class="vierkantAchterText">
+          <div class="vierkantAchterText"style="padding-top: 0;">
+          <br>
+            <div class="right-half">
+              <div class="vierkantAchterText">
                 <div id="info">
-                    <h1>Naam van land</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                
-                    <div class="slideshow-container">
-                        <div class="mySlides fade">
-                          <img src="images/header-home.jpg" style="width:100%">
-                        </div>
-                        <div class="mySlides fade">
-                          <img src="images/vliegtuig.jpg" style="width:100%">
-                        </div>
-                        <div class="mySlides fade">
-                          <img src="images/loc-gebouw-map.jpg" style="width:100%">
-                        </div>
-
-                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                        </div>
-                        <br>
-
-                        <div style="text-align:center">
-                          <span class="dot" onclick="currentSlide(1)"></span> 
-                          <span class="dot" onclick="currentSlide(2)"></span> 
-                          <span class="dot" onclick="currentSlide(3)"></span> 
-                    </div>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <?php
+                    if(!isset($_POST['taskOption']) || $_POST['taskOption'] == "Geen"){
+                      echo "<h2>Kies een land waar je meer informatie over zou willen</h2>
+                      <p>Je kunt een land kiesen door er 1 aan te klikken op de wereldkaart, of door gebruik te maken van de zoekbalk/dropdown-menu hierboven.</p>";
+                    }
+                    else{
+                        $land = $_POST['taskOption'];
+                      $query = 'SELECT `tekst` FROM `bpv` WHERE `Land_ID` = "'. $land .'" OR `land` = "'. $land . '"';
+                      $sth_bpv = $db_alfatravel->prepare($query);
+                      $sth_bpv->execute();
+                    while ($landTekst1 = $sth_bpv->fetch(PDO::FETCH_ASSOC)){
+                                $landTekst[] = $landTekst1['tekst'];
+                    }
+                    foreach ($landTekst as $key => $item){
+                      echo $item;
+                    }
+                     
+                  ?>
+                  <div class="slideshow-container">
+                    <?php
+                      for ($i=1; $i < 4; $i++) {
+                        echo '<div class="mySlides fade">';
+                        echo '<img src="images/' . $land . '/afbeelding' . strval($i) . '.png" style="width:100%">';
+                        echo "</div>";
+                      }
+                    ?>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+                  <br>
+                  <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                  </div>
+                  <?php
+                    }
+                  ?>
                 </div>
-            </div>
-            <script>
+              </div>
+              <script>
                 var slideIndex = 1;
                 showSlides(slideIndex);
 
@@ -118,7 +140,13 @@
                   slides[slideIndex-1].style.display = "block";  
                   dots[slideIndex-1].className += " active";
                 }
-            </script>
+              </script>
+            </div>
+          </div>
         </div>
-    </div>
-</div>
+        <script>
+function myFunction(item) {
+  document.getElementById('optie').value = item;
+  document.forms["taskOption"].submit();
+}
+</script>

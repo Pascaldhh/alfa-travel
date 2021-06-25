@@ -5,17 +5,24 @@ p{
 	margin: 10px;
 	padding: 10px;
 }
+.vierkantAchterText li{
+  margin-left: 40px;
+}
 .vierkantAchterText{
 	line-height: 1.3;
 	padding: 5%;
 	background-color: rgba(208,228,229, 0.5);
 	color: black;
 }
-.wereldmap{
+svg{
 	width: 100%;
-	background-color:  #003581;
-	padding: 20px;
+  background-color: lightgrey;
+	padding: 20px 50px 20px 20px;
 }
+path:hover{
+  fill: #003581;
+}
+
 .box{
 	display: flex;
 	justify-content: space-around;
