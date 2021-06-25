@@ -96,12 +96,11 @@ body{
 	background-color: red;
 }
 
-.navbalk a:hover {
+.navbalk nav a:hover {
 	background-image:url("images/select1.png");
 	background-size: cover;
 	color: white;
 }
-
 .container {
   	max-width: 1680px;
 	width: 100%;
@@ -120,7 +119,7 @@ body{
 }
 .rotate-foot {
 	content:'';
-	transform: skew(0deg, -2deg);
+	transform: skew(0deg, -1.5deg);
 	background:#003581;
 	display:block;
 	height: 67px;

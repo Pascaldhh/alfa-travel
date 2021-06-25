@@ -13,7 +13,7 @@
 <div class="body-content">
     <div class="sidepanel">
         <ul class="user-menu">
-            <li><a href="?pages=cms&page=pages">Pages</a></li>
+            <li><a href="?pages=cms&page=content">Content</a></li>
             <li><a href="?pages=cms&page=users">Users</a></li>
         </ul>
     </div>

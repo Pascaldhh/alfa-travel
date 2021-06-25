@@ -3,6 +3,7 @@ class routing
 {
     public $cmspage = DS . 'user-login';
     public $page = DS . 'home';
+    public $id = '';
     public $page2 = '';
     public $page3 = '';
     public function __construct()
@@ -48,7 +49,11 @@ class routing
         {
             $this->page3 = DS . $_GET['page3'];
         }
-        include_once(sprintf('cms%spages%s%s%s.php', DS, $this->page, $this->page2, $this->page3));
+        if(isset($_GET['id']))
+        {
+            $this->id = DS . 'content_page';
+        }
+        include_once(sprintf('cms%spages%s%s%s.php', DS, $this->page, $this->id, $this->page2, $this->page3));
         include_once(sprintf('cms%sfooter.php', DS));
     }
 }

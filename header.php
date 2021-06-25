@@ -27,10 +27,14 @@
 				</div>
 				<nav>
 					<ul class="main-menu">
-						<li><a href="wereldKaart.html">wereld kaart</a></li>
-						<li><a href="?page=vakanties">vakanties</a></li>
-						<li><a href="informatieOverLanden.html">informatie over landen</a></li>
-						<li><a href="?page=contact">contact</a></li>
+						<?php 
+						$db = new DB();
+						$read = $db->Read('website_header', 'page', 'id != "1"');
+						foreach($read as $item)
+						{
+							echo '<li><a href="?page=' . $item['page'] . '">' . $item['page'] . '</a></li>';
+						}
+						?>
 						<div class="search">
 							<input type="text" placeholder="Zoeken">
 						</div>

@@ -128,3 +128,19 @@ header {
 .myform label {
     margin-bottom: -20px;
 }
+.error-msg {
+    color: red;
+}
+
+.card .card__item {
+    padding: 30px 50px;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px 1px black;
+}
+.card {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
