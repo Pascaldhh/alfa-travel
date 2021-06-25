@@ -4,11 +4,14 @@
 	background-color: #f7f7f7;
 	display: inline-block;
 	margin: 20px;
-	border-radius: 3px;
+	border-radius: 6px;
 	padding: 18px;
 }
-.vakantie img{
+/*.vakantie img{
 	border-radius: 3px 3px 0 0;
+}*/
+.goeieHoogte{
+	height: 30%;
 }
 .vakantie h2{
 	margin-left: 20px

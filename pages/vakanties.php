@@ -44,7 +44,7 @@
 
 
                     echo "<div class='vakantie'>
-                    <img src='images/" . $picMain[0]["hoofdImg"] . "' style='width: 100%;'></img>
+                    <img src='images/" . $picMain[0]["hoofdImg"] . "' style='height: `190px; width: 100%;'></img>
                     <h2>" . $titel[0]["titel"] . "</h2>
                     <p>" . substr($text[0]["text"] , 0 ,255) . "<b>. . .</b></p>
                     <a href='http://localhost/alfaTravel/alfa-travel/?page=paginalocatie&id=" . $j . "'><img src='images/driehoek.png' style='margin-right:10px;' width='10px' class='driehoekje'><u><i>Lees meer</i></u></a>
