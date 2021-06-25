@@ -33,9 +33,9 @@
 						<li><a href="?page=vakanties">Vakanties</a></li>
 						<li><a href="?page=formulier">Aanvraagformulier</a></li>
 						<li><a href="?page=contact">contact</a></li>
-						<div class="search">
+<!-- 						<div class="search">
 							<input type="text" placeholder="Zoeken">
-						</div>
+						</div> -->
 					</ul>
 				</nav>
 			</div>

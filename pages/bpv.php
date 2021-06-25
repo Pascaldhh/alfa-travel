@@ -76,7 +76,7 @@ try {
                   <?php
                     if(!isset($_POST['taskOption']) || $_POST['taskOption'] == "Geen"){
                       echo "<h2>Kies een land waar je meer informatie over zou willen</h2>
-                      <p>Je kunt een land kiesen door er 1 aan te klikken op de wereldkaart, of door gebruik te maken van de zoekbalk/dropdown-menu hierboven.</p>";
+                      <p>Je kunt een land kiezen door er 1 aan te klikken op de wereldkaart, of door gebruik te maken van de zoekbalk/dropdown-menu hierboven.</p>";
                     }
                     else{
                         $land = $_POST['taskOption'];

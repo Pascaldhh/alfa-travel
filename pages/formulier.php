@@ -7,8 +7,8 @@
         <div class="left-half">
             <div class="vierkantAchterText">
                 <div class="formulier">
-                    <form action="" method="post">  
-                        <h2>Mail-formulier</h2><br>
+                    <form action="?page=formulier-bedank-pagina" method="post">  
+                        <h2>Aanvraagformulier</h2><br>
                         <label for="fname">Voornaam:</label>
                         <input type="text" id="fname" name="fname" required><br><br>
                         <label for="lname">Achternaam:</label>
@@ -27,7 +27,7 @@
                         <br><br>
                         <textarea name="message" rows="4" cols="50" placeholder="Vul hier een korte beschrijving in"></textarea>
                         <br>
-                        <input type="submit" value="Verzenden" action="http://localhost/alfaTravel/alfa-travel/?page=formulier-bedank-pagina">
+                        <input type="submit" value="Verzenden" >
                     </form>
                 </div>
             </div>
