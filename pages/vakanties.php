@@ -20,15 +20,39 @@
         <br>
         <h2>Voorbeeld vakanties</h2>
         <?php
-            for ($j=0; $j < rand(3, 19); $j++) {
+        include 'databaseuitlezen.php';
+            for ($j=1; $j <= $rowCount; $j++) {
+              $id = $j;
+
+              $titel = $db->Read('vakanties','titel','id =' . $id);
+
+
+              $picMain = $db->Read('vakanties','hoofdImg','id =' . $id);
+
+              $text = $db->Read('vakanties','text','id =' . $id);
+
+              $picSub = $db->Read('vakanties','subImg','id =' . $id);
+              $picSubCount = $db->Read('vakanties','subimgcount','id =' . $id);
+
+
+              $picSubR = $picSub[0]["subImg"];
+              $picSubD = explode(" ", $picSubR);
+
+
+              $x = (int)$picSubCount[0]["subimgcount"];
+
+
+
                     echo "<div class='vakantie'>
-                    <img src='images/testafbeelding.jpg' style='width: 100%;'></img>
-                    <h2>vakantie bestemming</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua  <b>. . .</b></p>
-                    <a href=''><img src='images/driehoek.png' style='margin-right:10px;' width='10px' class='driehoekje'><u><i>Lees meer</i></u></a>
+                    <img src='images/" . $picMain[0]["hoofdImg"] . "' style='width: 100%;'></img>
+                    <h2>" . $titel[0]["titel"] . "</h2>
+                    <p>" . substr($text[0]["text"] , 0 ,255) . "<b>. . .</b></p>
+                    <a href='http://localhost/git/alfa-travel/?page=paginalocatie&id=" . $j . "'><img src='images/driehoek.png' style='margin-right:10px;' width='10px' class='driehoekje'><u><i>Lees meer</i></u></a>
                     </div>";
-            }  
+
+                    $id = $j;
+            }
+
         ?>
         <div class="right-half">
         </div>
