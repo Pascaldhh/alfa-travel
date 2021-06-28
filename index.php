@@ -9,8 +9,15 @@ define('DIRR', __DIR__);
 require_once(__DIR__ . DS . 'database' . DS . 'db.php');
 
 // require all functions
-foreach (glob(implode(DS, [__DIR__, 'cms', 'functions', '*.php'])) as $file) {
-    require_once($file);
+if(isset($_GET['pages']) == 'cms')
+{
+    foreach (glob(implode(DS, [__DIR__, 'cms', 'functions', '*.php'])) as $file) {
+        require_once($file);
+    }
+} else {
+    foreach (glob(implode(DS, [__DIR__, 'functions', '*.php'])) as $file) {
+        require_once($file);
+    }
 }
 
 // Page structure

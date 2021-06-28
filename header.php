@@ -28,11 +28,14 @@
 				</div>
 				<nav>
 					<ul class="main-menu">
-						<li><a href="?page=bpv">Bpv</a></li>
-						<li><a href="?page=vak-excursies">Vak-excursies</a></li>
-						<li><a href="?page=vakanties">Vakanties</a></li>
-						<li><a href="?page=formulier">Aanvraagformulier</a></li>
-						<li><a href="?page=contact">contact</a></li>
+						<?php 
+						$db = new DB();
+						$read = $db->Read('website_header', 'page', 'id != "1"');
+						foreach($read as $item)
+						{
+							echo '<li><a href="?page='. $item['page'] .'">' . $item['page'] . '</a></li>';
+						}
+						?>
 <!-- 						<div class="search">
 							<input type="text" placeholder="Zoeken">
 						</div> -->
