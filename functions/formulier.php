@@ -27,7 +27,6 @@ class MH
         {
             $this->msg = $_POST['message'];
         }
-        $this
     }
     public function sendMail()
     {

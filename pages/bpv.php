@@ -1,4 +1,5 @@
 <link rel="stylesheet" type="text/css" href="css/bpv.css">
+<link href="map/css/styleWorld.css" rel="stylesheet" type="text/css"/>
 <?php
 
 
@@ -11,60 +12,45 @@ try {
 
 
 ?>
-
+<script src="map/JS/miniature.earth.js"></script>
+<?php
+require_once("map/location.php");
+require_once("map/pins.php");
+?>
     <div class="container">
         <div class="left-half">
             <div class="vierkantAchterText magnifier-container">
-                <?php include_once('worldmap.html');
-                $query = 'SELECT * FROM `bpv`';
-                  $sth_bpv = $db_alfatravel->prepare($query);
-                  $sth_bpv->execute();
-                    while ($bpvID1 = $sth_bpv->fetch(PDO::FETCH_ASSOC)){
-                      $bpvID[] = $bpvID1['Land_ID'];
-                    }
-                    foreach ($bpvID as $key => $item) {
-                      echo '<style type="text/css">';
-                      echo "#" . $item . "{ fill: #ce0000; cursor: pointer;} ";
-                      echo "</style>";
-                      // echo "<script> document.getElementById('" . $item . "').setAttribute('method','POST'); </script> ";
-                      echo "<script> document.getElementById('" . $item . "').setAttribute('onclick','myFunction(\'". $item ."\')'); </script>";
-                    }
-                    // while ($bpv1 = $sth_bpv->fetch(PDO::FETCH_ASSOC)){
-                    //       $bpv[] = $bpv1['land'];
-                    // }
-                    // foreach ($bpv as $key => $item){
-                      
-                    // }
-                  $sth_bpv = $db_alfatravel->prepare($query);
-                  $sth_bpv->execute();
-                ?>
+                <div id="wrapper">
+                  <div id="main-col">
+                      <div id="myearth" class="little-earth">
+                          <div id="tip-layer">
+                              <div>
+                                  <div id="tip-big"></div>
+                                  <div id="tip-small"></div>
+                              </div>
+                          </div>
+                          <div id="button-reset" onclick="reset();"></div>
+                      </div>
+                  </div>
+
+                  <div id="side-col">
+                      <div id="CountryInfo"><br></div>
+                      <div>
+                          <form method="post" action="" id="nameOption" >
+                              <select style="" id="from" onchange="if ( ! this.getAttribute('disabled') ) selectFrom();">
+                                  <option></option>
+                              </select>
+                              <input type="submit" name="nameOption">
+                          </form>
+                          <select class="hidden" id="to" onchange="if ( ! this.getAttribute('disabled') ) selectTo();"
+                                  disabled>
+                          </select>
+                      </div>
+                    </div>
+                </div>
+
                 <div class="box">   
 <!--<div class="search"><h2>Landen zoeken</h2><input type="text" placeholder="Zoeken"></div> -->
-                  <div>
-                    <h2>Lijst met landen</h2>
-                      <form method="post" action="" id="taskOption">
-                      <select name="taskOption" id="optie" >
-                      <option value="Geen">Geen</option>
-                      <?php
-
-                        while ($bpv1 = $sth_bpv->fetch(PDO::FETCH_ASSOC)){
-                          $bpv[] = $bpv1['land'];
-                        }
-                        foreach ($bpv as $key => $item){
-                          echo "<option value=" . $item . ">" . $item . "</option>";
-                        }
-                        while ($bpvID1 = $sth_bpv->fetch(PDO::FETCH_ASSOC)){
-                          $bpvID[] = $bpvID1['Land_ID'];
-                        }
-                        foreach ($bpvID as $key => $item) {
-                          echo "<option style='display: none;' value=" . $item . ">" . $item . "</option>";
-                        }
-                        ?>
-<!--                       <option value="ES"></option> -->
-                      </select>
-                      <input type="submit" value="Bekijken"/>
-                    </form>
-                  </div>
                 </div>
               </div>
             </div>
@@ -74,13 +60,19 @@ try {
               <div class="vierkantAchterText">
                 <div id="info">
                   <?php
-                    if(!isset($_POST['taskOption']) || $_POST['taskOption'] == "Geen"){
+                    if(!isset($_POST['nameOption']) || $_POST['nameOption'] == "Geen"){
                       echo "<h2>Kies een land waar je meer informatie over zou willen</h2>
                       <p>Je kunt een land kiezen door er 1 aan te klikken op de wereldkaart, of door gebruik te maken van de zoekbalk/dropdown-menu hierboven.</p>";
+                      echo $_POST['nameOption'];
+                      echo $_POST['nameOption'];
+                      echo $_POST['nameOption'];
+                      echo $_POST['nameOption'];
+                      echo $_POST['nameOption'];
+                      echo $_POST['nameOption'];
                     }
                     else{
-                        $land = $_POST['taskOption'];
-                      $query = 'SELECT `tekst` FROM `bpv` WHERE `Land_ID` = "'. $land .'" OR `land` = "'. $land . '"';
+                        $land = $_POST['nameOption'];
+                      $query = 'SELECT `tekst` FROM `location` WHERE `Land` = "'. $land . '"';
                       $sth_bpv = $db_alfatravel->prepare($query);
                       $sth_bpv->execute();
                     while ($landTekst1 = $sth_bpv->fetch(PDO::FETCH_ASSOC)){
