@@ -1,7 +1,6 @@
 <link rel="stylesheet" type="text/css" href="css/bpv.css">
 <?php
 
-
 try {
   $db_alfatravel = new PDO('mysql:host=localhost;dbname=alfatravel' , 'root', '');
   $db_alfatravel->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -41,7 +40,7 @@ try {
                 <div class="box">   
 <!--<div class="search"><h2>Landen zoeken</h2><input type="text" placeholder="Zoeken"></div> -->
                   <div>
-                    <h2>Lijst met landen</h2>
+                    <h2><?php echo $db->Read('website_content', 'content', 'page_id = "2" AND id = "9"')[0]['content'];?></h2>
                       <form method="post" action="" id="taskOption">
                       <select name="taskOption" id="optie" >
                       <option value="Geen">Geen</option>
@@ -75,8 +74,8 @@ try {
                 <div id="info">
                   <?php
                     if(!isset($_POST['taskOption']) || $_POST['taskOption'] == "Geen"){
-                      echo "<h2>Kies een land waar je meer informatie over zou willen</h2>
-                      <p>Je kunt een land kiezen door er 1 aan te klikken op de wereldkaart, of door gebruik te maken van de zoekbalk/dropdown-menu hierboven.</p>";
+                      echo "<h2>" . $db->Read('website_content', 'content', 'page_id = "2" AND id = "10"')[0]['content'] . "</h2>
+                      <p>" . $db->Read('website_content', 'content', 'page_id = "2" AND id = "11"')[0]['content'] ."</p>";
                     }
                     else{
                         $land = $_POST['taskOption'];

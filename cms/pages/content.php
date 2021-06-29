@@ -1,7 +1,7 @@
 <?php include_once(sprintf('cms-panel%spanel-head.php', DS)); ?>
 
 <div class="content">
-<h2 class="page-title">Content</h2>
+    <h2 class="page-title">Pages</h2>
     <div class="card">
         <?php 
         $db = new DB;
