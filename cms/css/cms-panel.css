@@ -144,3 +144,17 @@ header {
     flex-wrap: wrap;
     margin-top: 50px;
 }
+.card a {
+    text-decoration: none;
+    transform:scale(1);
+    transition: all 0.5s ease;
+}
+.card a h2 {
+    transition: color .5s ease;
+}
+.card a:hover {
+    transform: scale(1.1);
+}
+.card a:hover h2 {
+    color:#04449e !important;
+}

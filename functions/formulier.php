@@ -27,15 +27,16 @@ class MH
         {
             $this->msg = $_POST['message'];
         }
-        $this
     }
     public function sendMail()
     {
         if(isset($_POST['submit']))
         {
+            
             mail($this->to, $this->subject, $this->msg, sprintf("From: %s", $this->mail));
             $this->succes = "Mail sent succesfully!";
             header("Location: ?page=formulier-bedank-pagina");
+            exit();
         }
     }
     public function succesfully()

@@ -8,12 +8,12 @@
             <div class="vierkantAchterText">
                 <div class="formulier">
                     <form method="post">  
-                        <h2>Aanvraagformulier</h2><br>
-                        <label for="fname">Voornaam:</label>
+                        <h2><?php echo $db->Read('website_content', 'content', 'page_id = "5" AND id = "31"')[0]['content'];?></h2><br>
+                        <label for="fname"><?php echo $db->Read('website_content', 'content', 'page_id = "5" AND id = "32"')[0]['content'];?></label>
                         <input type="text" id="fname" name="fname" required><br><br>
-                        <label for="lname">Achternaam:</label>
+                        <label for="lname"><?php echo $db->Read('website_content', 'content', 'page_id = "5" AND id = "33"')[0]['content'];?></label>
                         <input type="text" id="lname" name="lname" required><br><br>
-                        <label for="e-mail">E-mail adres:</label>
+                        <label for="e-mail"><?php echo $db->Read('website_content', 'content', 'page_id = "5" AND id = "34"')[0]['content'];?></label>
                         <input type="text" id="email" name="e-mail" required><br><br>
                         <label for="email"></label>
 
@@ -25,9 +25,9 @@
                         <label for="other">Bpv</label>
                         
                         <br><br>
-                        <textarea name="message" rows="4" cols="50" placeholder="Vul hier een korte beschrijving in"></textarea>
+                        <textarea name="message" rows="4" cols="50" placeholder="<?php echo $db->Read('website_content', 'content', 'page_id = "5" AND id = "35"')[0]['content'];?>"></textarea>
                         <br>
-                        <input type="submit" value="Verzenden" >
+                        <input type="submit" name="submit" value="<?php echo $db->Read('website_content', 'content', 'page_id = "5" AND id = "36"')[0]['content'];?>" >
                     </form>
                 </div>
             </div>

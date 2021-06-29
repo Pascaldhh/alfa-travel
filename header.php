@@ -1,3 +1,4 @@
+<?php $db = new DB(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,12 +29,11 @@
 				</div>
 				<nav>
 					<ul class="main-menu">
-						<?php 
-						$db = new DB();
+					<?php
 						$read = $db->Read('website_header', 'page', 'id != "1"');
 						foreach($read as $item)
 						{
-							echo '<li><a href="?page='. $item['page'] .'">' . $item['page'] . '</a></li>';
+							echo '<li><a href="?page='. strtolower($item['page']) .'">' . $item['page'] . '</a></li>';
 						}
 						?>
 <!-- 						<div class="search">
