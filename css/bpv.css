@@ -1,5 +1,3 @@
-* {box-sizing: border-box;}
-
 h2{
 	color: #003581;
 }
@@ -37,8 +35,6 @@ path:hover{
 
 /*Gestolen van w3schools.com zag er cool uit*/
 
-
-* {box-sizing: border-box}
 .mySlides {display: none}
 img {vertical-align: middle;}
 
