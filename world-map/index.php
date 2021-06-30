@@ -16,7 +16,7 @@
         <div id="CountryInfo"><br></div>
         <div>
             <h2 style="font-family: 'Signika', sans-serif; margin-bottom:10px;"><?php echo $db->Read('website_content', 'content', 'page_id = "2" AND id = "9"')[0]['content'];?></h2>
-            <form method="get" action="" id="nameOption">
+            <form method="get" action="#info" id="nameOption">
                 <input type="hidden" name="page" value="bpv" />
                 <select id="from" name="country" onchange="if ( ! this.getAttribute('disabled') ) selectFrom();">
                     <option></option>
