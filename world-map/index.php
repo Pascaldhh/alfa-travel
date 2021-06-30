@@ -1,4 +1,4 @@
-<link href="world-map/css/styleWorld.css" rel="stylesheet" type="text/css"/>
+<link href="world-map/css/style-world.css" rel="stylesheet" type="text/css"/>
 <div id="wrapper">
     <div id="main-col">
         <div id="myearth" class="little-earth">
