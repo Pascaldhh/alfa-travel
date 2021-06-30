@@ -30,11 +30,11 @@
                         <input type="submit" name="submit" value="<?php echo $db->Read('website_content', 'content', 'page_id = "5" AND id = "36"')[0]['content'];?>" >
                     </form>
                 </div>
+                <img src="images/formulierfoto.jpg" class="imageForm">
             </div>
+
         </div>
         <br>
-        <div class="right-half">
-        </div>
     </div>
 </div>
 
