@@ -38,6 +38,7 @@ body{
 	width: 35px;
 	align-items: center;
 	position: relative;
+	z-index: 2;
 }
 .hamburger-btn {
 	width: 100%;
@@ -106,7 +107,9 @@ body{
 	background-size: cover;
 	color: white;
 }
-
+.noscroll {
+	overflow: hidden;
+}
 .container {
   	max-width: 1680px;
 	width: 100%;
@@ -131,7 +134,6 @@ body{
 	height: 67px;
 	transform-origin:left;
 }
-
 
 .header-container {
 	margin-top: 50px;
@@ -211,5 +213,8 @@ a:hover img{
 	}
 	.mobile-menu {
 		display: none;
+	}
+	.noscroll {
+		overflow: auto;
 	}
 }
