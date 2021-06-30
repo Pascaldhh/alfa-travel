@@ -26,7 +26,7 @@
                 </p>
                 </div>
                 <div class="vierkantAchterText">
-                    <a href="?page=aanvraagformulier"><img src="images/driehoek.png" style="margin-right:10px;" width="10" class="driehoekje"><u><i>
+                    <a href="?page=contact"><img src="images/driehoek.png" style="margin-right:10px;" width="10" class="driehoekje"><u><i>
                     <?php echo $db->Read('website_content', 'content', 'page_id = "1" AND id = "5"')[0]['content'];?>
                     </i></u></a>
                 </div>
