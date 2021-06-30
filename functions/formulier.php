@@ -40,7 +40,7 @@ class MH
     {
         if(isset($_POST['submit']))
         {
-            mail($this->to, $this->subject, $this->msg, sprintf("From: %s", $this->mail));
+            mail($this->to, $this->subject, $this->msg, $this->headers);
             $this->succes = "Mail sent succesfully!";
             header("Location: ?page=formulier-bedank-pagina");
             exit();
