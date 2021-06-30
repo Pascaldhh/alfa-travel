@@ -150,7 +150,7 @@ body{
     justify-content: flex-end;
     z-index: 2;
     position: relative;
-    padding-top: 3%;
+    padding: 3% 15px 15px 15px;
 }
 .button{
 	background-color: #003581;
@@ -160,6 +160,7 @@ body{
 	margin: 15px 0 0 0;
 	padding: 12.5px;
 	border-radius: 5px;
+	display: inline-block;
 }
 .button p{
 	padding: 0;
