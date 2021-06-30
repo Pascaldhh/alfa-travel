@@ -17,7 +17,7 @@
                 <a href="?page=aanvraagformulier"><img src="images/driehoek.png" style="margin-right:10px;" width="10" class="driehoekje"><u><i><?php echo $db->Read('website_content', 'content', 'page_id = "4" AND id = "29"')[0]['content'];?></i></u></a>
                 <div style="display: flex; justify-content: flex-end; margin-top: 50px;">
                     <h3 style="margin: 25px 10px;">Hebt u nog vragen?</h3>
-                    <a href="tel:+31-883342264"><div class="button"><p>Klik hier om te bellen!</p></div></a>
+                    <a href="tel:+31883342264"><div class="button"><p>Klik hier om te bellen!</p></div></a>
                 </div>
             </div>
         </div>
