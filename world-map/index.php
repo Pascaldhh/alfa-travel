@@ -1,4 +1,4 @@
-<link href="world-map/css/styleWorld.css" rel="stylesheet" type="text/css"/>
+<link href="world-map/css/style-world.css" rel="stylesheet" type="text/css"/>
 <div id="wrapper">
     <div id="main-col">
         <div id="myearth" class="little-earth">
@@ -15,7 +15,8 @@
     <div id="side-col">
         <div id="CountryInfo"><br></div>
         <div>
-            <form method="get" action="" id="nameOption">
+            <h2 style="font-family: 'Signika', sans-serif; margin-bottom:10px;"><?php echo $db->Read('website_content', 'content', 'page_id = "2" AND id = "9"')[0]['content'];?></h2>
+            <form method="get" action="#info" id="nameOption">
                 <input type="hidden" name="page" value="bpv" />
                 <select id="from" name="country" onchange="if ( ! this.getAttribute('disabled') ) selectFrom();">
                     <option></option>

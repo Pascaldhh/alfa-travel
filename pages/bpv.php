@@ -4,25 +4,6 @@
       <div class="left-half">
         <div class="vierkantAchterText magnifier-container">
           <?php include_once(sprintf('world-map%sindex.php', DS)); ?>
-          <div class="box">   
-            <div>
-              <h2><?php echo $db->Read('website_content', 'content', 'page_id = "2" AND id = "9"')[0]['content'];?></h2>
-                <form method="get" id="country">
-                  <input type="hidden" name="page" value="bpv" />
-                  <select name="country" id="optie" >
-                    <option value="geen">Geen</option>
-                    <?php 
-                      $read = $db->Read('location', 'Land');
-                      foreach($read as $item)
-                      {
-                        echo '<option value="'.strtolower($item['Land']).'">'.$item['Land'].'</option>';
-                      } 
-                    ?>
-                  </select>
-                  <input type="submit" value="Bekijken"/>
-                </form>
-              </div>
-            </div>
           </div>
         </div>
         <div class="vierkantAchterText"style="padding-top: 0;">

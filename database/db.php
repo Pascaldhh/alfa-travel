@@ -7,12 +7,12 @@ class DB
     private $user = 'root';
     private $pass = '';
     private $name = 'alfatravel';
-    
+
     public function __construct()
     {
         try {
          $this->db = new PDO(sprintf("mysql:host=%s;dbname=%s", $this->host, $this->name), $this->user, $this->pass);
-         $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
+         $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
@@ -56,4 +56,5 @@ class DB
         return true;
     }
 }
+  
 $db = new DB;
