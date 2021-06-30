@@ -4,9 +4,12 @@ class MH
     public $fn;
     public $ln;
     public $mail;
+    public $betreft;
     public $msg;
     public $to = "jp.dehaan@student.alfa-college.nl";
-    public $subject = "Form send";
+    public $headers = 'From: website@alfa-travel.nl' . "\r\n" .
+    'Reply-To: reisbureau.park@alfa-college.nl';
+    public $subject;
     public $succes = "";
 
     public function __construct()
@@ -23,12 +26,16 @@ class MH
         {
             $this->mail = $_POST['email'];
         }
+        if(isset($_POST['betreft']))
+        {
+            $this->betreft = $_POST['betreft'];
+        }
         if(isset($_POST['message']))
         {
             $this->msg = $_POST['message'];
         }
+        $this->subject = "Aanvraag formulier website " . $this->fn . ": " . $this->betreft;
     }
-
     public function sendMail()
     {
         if(isset($_POST['submit']))
