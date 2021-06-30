@@ -17,7 +17,6 @@
                       {
                         echo '<option value="'.strtolower($item['Land']).'">'.$item['Land'].'</option>';
                       } 
-                      
                     ?>
                   </select>
                   <input type="submit" value="Bekijken"/>
@@ -37,7 +36,7 @@
                     <p>" . $db->Read('website_content', 'content', 'page_id = "2" AND id = "11"')[0]['content'] ."</p>";
                   } else { 
                     $land = $_GET['country'];
-                    $read2 = $db->Read('bpv', 'tekst', sprintf('Land_ID ="%s" OR land = "%s"', $land, $land));
+                    $read2 = $db->Read('location', 'tekst', sprintf('LandCode ="%s" OR Land = "%s"', $land, $land));
                     foreach ($read2 as $item){
                       echo $item['tekst'];
                     }

@@ -94,7 +94,9 @@
     border-radius: 50%;
     background-color: #66d8ff;
 }
-
+.earth-container {
+    z-index: 0 !important;
+}
 #tip-layer {
     content: "";
     position: absolute;

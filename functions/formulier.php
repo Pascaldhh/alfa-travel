@@ -5,7 +5,9 @@ class MH
     public $ln;
     public $mail;
     public $msg;
-    public $to = "hiddehoek12@gmail.com";
+    public $to = "reisbureau.park@alfa-college.nl";
+    public $headers = 'From: website@alfa-travel.nl' . "\r\n" .
+    'Reply-To: reisbureau.park@alfa-college.nl';
     public $subject = "Form send";
     public $succes = "";
 
@@ -33,7 +35,7 @@ class MH
         if(isset($_POST['submit']))
         {
             
-            mail($this->to, $this->subject, $this->msg, sprintf("From: %s", $this->mail));
+            mail($this->to, $this->subject, $this->msg, $this->headers);
             $this->succes = "Mail sent succesfully!";
             header("Location: ?page=formulier-bedank-pagina");
             exit();

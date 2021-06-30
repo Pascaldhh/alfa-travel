@@ -6,11 +6,11 @@ mobileMenu.addEventListener("click", () => {
     if(!menuOpen)
     {
         mainMenu.classList.remove("open");
-        body.style.overflow = 'scroll';
+        body.classList.remove('noscroll');
         menuOpen = true;
     } else {
         mainMenu.classList.add("open");
-        body.style.overflow = 'hidden';
+        body.classList.add('noscroll');
         menuOpen = false;
     }
 });
