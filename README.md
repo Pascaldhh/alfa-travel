@@ -8,11 +8,13 @@ You can view the website live at https://alfa-travel.nl/
 ## Features
 The Alfa Travel website includes the following features:
 
-Home page with a slideshow of featured packages and a search bar to find packages by destination.
-About Us page with information about the agency and its history.
-Packages page with a list of available packages and a detailed description of each package, including the price, itinerary, and features.
-Contact Us page with a contact form for customers to send inquiries and a map showing the agency's location.
-Responsive design that adapts to different screen sizes, including desktops, laptops, tablets, and smartphones.
+- Home page with a section about us, contact and request.
+- BPV page with information about each country you can travel to.
+- Field excursions page with how the travel agency works and where you can Request a excursion.
+- Vacations page with how the travel agency works and where you can request a vacation.
+- Application form page where you can request the excursion / vacation.
+- Contact page with the opening hours and contact information.
+- Responsive design that adapts to different screen sizes, including desktops, laptops, tablets, and smartphones.
 ## Technologies Used
 The Alfa Travel website was developed using the following technologies:
 
